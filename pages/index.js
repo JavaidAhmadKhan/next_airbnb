@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import LargeCard from "../components/LargeCard";
 import MediumCard from "../components/MediumCard";
+import MediumCard2 from "../components/MediumCard2";
 import SmallCard from "../components/SmallCard";
 
 export default function Home({ exploreData, cardsData }) {
@@ -37,6 +38,14 @@ export default function Home({ exploreData, cardsData }) {
           <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
             {cardsData?.map(({ img, title }) => (
               <MediumCard key={img} img={img} title={title} />
+            ))}
+          </div>
+        </section>
+        <section>
+          <h2 className="text-4xl font-semibold py-8">Discover things to do</h2>
+          <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
+            {cardsData?.map(({ img, title }) => (
+              <MediumCard2 key={img} img={img} title={title} />
             ))}
           </div>
         </section>
